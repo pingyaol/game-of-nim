@@ -1,9 +1,11 @@
 import java.util.Random; 
-import java.util.Scanner;
+import java.util.Scanner; 
 
 public class BoardRunner {
     private boolean hasEnded; 
     private int totalPieces; 
+    Board board; 
+    Player player1; 
 
     public BoardRunner() {
         Board board = new Board(); 
@@ -18,10 +20,11 @@ public class BoardRunner {
         while (true) {
             // finish play function 
             System.out.println("Welcome to the Game of Nim! "); 
-            Syste.out.println("How many game pieces would you like to take? "); 
-            int guess = input.nextLine(); 
+            System.out.println("How many game pieces would you like to take? "); 
+            String guess = input.nextLine();
+            int int_guess = Integer.valueOf(guess); 
 
-            player1.addPieces(guess); 
+            player1.addPieces(int_guess); 
         }
     }
 

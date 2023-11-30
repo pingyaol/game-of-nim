@@ -3,7 +3,7 @@ import java.util.Random;
 public class Board {
     private int totalPieces; 
 
-    public createPieces() {
+    public void createPieces() {
         totalPieces = (int) ((Math.random() * (41)) + 10); 
     }
 

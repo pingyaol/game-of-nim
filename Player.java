@@ -1,8 +1,8 @@
 public class Player {
-    private string name; 
+    private String name; 
     private int numOfPieces = 0; 
 
-    public Player(string name) {
+    public Player(String name) {
         this.name = name; 
     }
 
@@ -14,7 +14,7 @@ public class Player {
         return this.numOfPieces; 
     }
 
-    public string getName() {
+    public String getName() {
         return this.name; 
     }
 }
