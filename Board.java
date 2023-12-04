@@ -44,7 +44,10 @@ public class Board {
         sethighestGuess();
         System.out.println ("There are " + totalPieces+ " pieces to start with");
         currentPlayer = player1;
-        while (totalPieces > 0) {
+        boolean play = true; 
+
+        // repeat these actions till the pile reaches 0 
+        while (totalPieces > 0 && play) {
             System.out.println(currentPlayer.getName()+ " enter in how many pieces you want to take, the max number of pieces you can take is " + getmaxhighestGuess());
             int guess = in.nextInt();
             totalPieces -= guess;
@@ -54,8 +57,21 @@ public class Board {
             switchTurn();
             System.out.println(currentPlayer.getName() + " has won!!");
             }
-            sethighestGuess ();
+            sethighestGuess();
             switchTurn();
+
+            if (totalPieces == 0) {
+                System.out.println("Would you like to play again? (yes/no)"); 
+                String choice = in.next(); 
+                if (choice.equals("yes")) {
+                    createPieces(); 
+                    sethighestGuess();
+                    play(); 
+                } else {
+                    play = false; 
+                    System.out.println("Thank you for playing! Bye! ");
+                }
+            }
         }
         
     }

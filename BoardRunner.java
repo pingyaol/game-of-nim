@@ -1,6 +1,6 @@
 public class BoardRunner {
     public static void main(String[] args) {
-        Board.setPlayers ();
+        Board.setPlayers();
         Board.play();
     }
 
